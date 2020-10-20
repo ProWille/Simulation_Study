@@ -21,8 +21,8 @@ TIME_ARRIVAL = 1.0          # Mean arrival time (incoming packets).
 SIZE_PACKET = 100           # Mean packet size in bytes (affects processing time).
 RANDOM_SEED = 42            # Seed for random number.
 SIMULATION_TIME = 100000    # Simulation time.
-NUMBER_PACKETS = 999999     # The number of packets to be sent.
-QUEUE_LIMIT = 100000        # Limited amount of packets or bytes in buffer queue.
+NUMBER_PACKETS = 999999     # The number of packages to be sent.
+QUEUE_LIMIT = 100000        # Limited amount of packages or bytes in buffer queue.
 LIMIT_BYTES = True          # Should buffer queue size be limited in terms of bytes?
 SAMPLING_INTERVALL = 1.0    # Sampling intervall (1/samp) used to monitor the buffer queue.
 
