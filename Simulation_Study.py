@@ -1,15 +1,5 @@
 # Simulation code in Python is written by William Hirschfeldt
 
-""" This code was used in a simulation study article called
-    "Simulation Study in Python with SimPy - Modelling a 
-    simple M/M/1 Queue System". The simulation is a model of 
-    an M/M/1 queueing system using SimPy. Packets are being 
-    generated at random and form a queue before being processed 
-    by the server. Each individuall packet and the queue will 
-    be recorded. From different experimental data, different 
-    outputs will be produced for evaluation.
-"""
-
 # The necessary libraries to perform the simulation study.
 import simpy
 import random
