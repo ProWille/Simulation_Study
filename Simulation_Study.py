@@ -14,7 +14,7 @@ SIMULATION_TIME = 100000    # Simulation time.
 NUMBER_PACKETS = 999999     # The number of packages to be sent.
 QUEUE_LIMIT = 100000        # Limited amount of packages or bytes in buffer queue.
 LIMIT_BYTES = True          # Should buffer queue size be limited in terms of bytes?
-SAMPLING_INTERVALL = 1.0    # Sampling intervall (1/samp) used to monitor the buffer queue.
+SAMPLING_INTERVAL = 1.0    # Sampling interval (1/samp) used to monitor the buffer queue.
 
 # To store data collected from simulation.
 queue = None            # The buffer queue used.
@@ -88,11 +88,11 @@ def recorder(env, packet):
     packets_recorded += 1
     bytes_recorded += packet.size
 
-# Monitor the buffer queue sizes at sampling intervall time.
+# Monitor the buffer queue sizes at sampling interval time.
 def monitor(env):
     global byte_sizes, byte_size, queue_sizes, samp_time, queue, queue_avg_sizes
     while True:
-        yield env.timeout(1/SAMPLING_INTERVALL)
+        yield env.timeout(1/SAMPLING_INTERVAL)
         byte_sizes.append(byte_size)
         queue_sizes.append(len(queue.items))
         queue_avg_sizes.append(sum(queue_sizes)/len(queue_sizes))
